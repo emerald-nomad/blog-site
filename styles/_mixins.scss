@@ -1,0 +1,19 @@
+@mixin mq($name) {
+  @if ($name == sm) {
+    @media (min-width: 35em) {
+      @content;
+    }
+  }
+
+  @if ($name == md) {
+    @media (min-width: 50em) {
+      @content;
+    }
+  }
+
+  @if ($name == lg) {
+    @media (min-width: 65em) {
+      @content;
+    }
+  }
+}

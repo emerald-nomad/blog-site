@@ -1,0 +1,41 @@
+@import "mixins";
+
+:root {
+  // COLORS
+  --color-black: #121212;
+  --color-dark-grey: #212121;
+  --color-grey: #535353;
+  --color-light-grey: #b3b3b3;
+  --color-white: #ffffff;
+  --color-green: #1db954;
+
+  box-sizing: border-box;
+  font-size: calc(1vw + 1em);
+  background-color: var(--color-dark-grey);
+  color: var(--color-light-grey);
+
+  a {
+    color: var(--color-green);
+    text-decoration: none;
+  }
+
+  body * + * {
+    margin-top: 1.5em;
+  }
+
+  @include mq(sm) {
+    font-size: calc(1vw + 0.85em);
+  }
+
+  @include mq(md) {
+    font-size: calc(1vw + 0.5em);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
