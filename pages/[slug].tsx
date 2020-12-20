@@ -18,7 +18,7 @@ const Post: React.FC<PostProps> = ({blogPost}) => {
     return <SyntaxHighlighter style={vscDarkPlus} language={language} children={value} />
   }
 }
-console.log(router)
+
   return (
     <>
     <Head>
@@ -33,7 +33,7 @@ console.log(router)
       <meta property="og:image" content={`https://emeraldnomad.dev/images/garden.jpg`} key="ogimage" />
       <meta property="og:site_name" content="JT's Digital Garden" key="ogsitename" />
       <meta property="og:title" content={blogPost.data.title} key="ogtitle" />
-      {/* <meta property="og:description" content={description} key="ogdesc" /> */}
+      <meta property="og:description" content={blogPost.data.description} key="ogdesc" />
     </Head>
       <div>
         <h1>{blogPost.data.title}</h1>

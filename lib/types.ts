@@ -14,6 +14,7 @@ export interface Blog {
   data: {
     title: string;
     slug: string;
+    description: string;
     tags: string;
   };
 }
