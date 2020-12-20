@@ -1,6 +1,9 @@
 ---
 title: This is the last test
 slug: last-test
+updatedOn: 10/06/2020
+timeToRead: 5
+description: This is a test blog post
 ---
 
 ## Adding a Header!!!

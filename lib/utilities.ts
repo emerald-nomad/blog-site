@@ -30,7 +30,17 @@ export const getBlogPost = (slug: string): Blog => {
     return result;
   }, []);
 
-  return values[0];
+  const post = values[0];
+
+  const date = new Date(post.data.updatedOn).toISOString();
+
+  return {
+    ...post,
+    data: {
+      ...post.data,
+      updatedOn: moment(date).format("MMMM Do, YYYY"),
+    },
+  };
 };
 
 export const getBlogPosts = (): Blog[] => {
@@ -46,14 +56,21 @@ export const getBlogPosts = (): Blog[] => {
 
       return document;
     })
-    .sort((a, b) => +b.data.date - +a.data.date)
-    .map((post) => ({
-      ...post,
-      data: {
-        ...post.data,
-        date: `Published ${moment(post.data.date).format("MMM Do YYYY")}`,
-      },
-    }));
+    .sort((a, b) => {
+      // @ts-ignore
+      return new Date(b.data.updatedOn) - new Date(a.data.updatedOn);
+    })
+    .map((post) => {
+      const date = new Date(post.data.updatedOn).toISOString();
+
+      return {
+        ...post,
+        data: {
+          ...post.data,
+          updatedOn: moment(date).format("MMMM Do, YYYY"),
+        },
+      };
+    });
 
   return data;
 };

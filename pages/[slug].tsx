@@ -37,8 +37,8 @@ const Post: React.FC<PostProps> = ({blogPost}) => {
     </Head>
       <div>
         <h1>{blogPost.data.title}</h1>
-          <time className="time__dot">Last updated on December 8, 2020</time>
-          <time>5 min read</time>
+          <time className="time__dot">Last updated on {blogPost.data.updatedOn}</time>
+          <time>{blogPost.data.timeToRead} min read</time>
         <hr/>
       </div>
      

@@ -1,6 +1,9 @@
 ---
 title: Your first seed
 slug: Note
+updatedOn: 12/25/2020
+timeToRead: 5
+description: This is a test blog post
 ---
 
 ### Welcome!

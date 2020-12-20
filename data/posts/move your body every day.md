@@ -1,6 +1,9 @@
 ---
 title: Move your body
 slug: body
+updatedOn: 12/31/2020
+timeToRead: 3
+description: This is a test blog post
 ---
 
 Move your body every day. Benefits include:

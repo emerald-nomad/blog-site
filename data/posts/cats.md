@@ -1,6 +1,9 @@
 ---
 title: A note about cats
 slug: cats
+updatedOn: 12/25/2020
+timeToRead: 10
+description: This is a test blog post
 ---
 
 This is a second note with a poem with cats.

@@ -15,6 +15,8 @@ export interface Blog {
     title: string;
     slug: string;
     description: string;
+    timeToRead: number;
+    updatedOn: string;
     tags: string;
   };
 }
