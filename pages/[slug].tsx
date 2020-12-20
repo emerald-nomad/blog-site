@@ -1,11 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
 import { useRouter } from 'next/router'
 import Markdown from "react-markdown";
 import gfm from 'remark-gfm'
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Blog, getBlogPost, getBlogPosts } from "lib";
-import Head from "next/head";
+import { CodeBlock, Table } from "components";
 
 interface PostProps {
   blogPost: Blog;
@@ -13,11 +12,11 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = ({blogPost}) => {
   const router = useRouter();
+  
   const renderers = {
-  code: ({language, value}) => {
-    return <SyntaxHighlighter style={vscDarkPlus} language={language} children={value} />
+    code: CodeBlock,
+    table: Table
   }
-}
 
   return (
     <>
