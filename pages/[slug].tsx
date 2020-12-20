@@ -18,9 +18,13 @@ const Post: React.FC<PostProps> = ({blogPost}) => {
 
   return (
     <>
-      <div style={{marginBottom: "2.25em"}}>
+      <div>
         <h1>{blogPost.data.title}</h1>
-        <time>Last updated on December 8, 2020</time>
+        
+          <time className="time__dot">Last updated on December 8, 2020</time>
+          <time>5 min read</time>
+        
+        <hr/>
       </div>
      
       <Markdown plugins={[gfm]} renderers={renderers} allowDangerousHtml children={blogPost.content} />
