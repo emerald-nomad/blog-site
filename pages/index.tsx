@@ -14,9 +14,11 @@ const Home: React.FC<HomeProps> = ({blogs, pageData}) => {
   return (
     <>
       <Markdown children={pageData.content} allowDangerousHtml/>
-      {
-        blogs.map(blog => <p key={blog.data.slug}><Link href={`/${blog.data.slug}`}><a>{blog.data.title}</a></Link></p>)
-      }
+      <ul>
+        {     
+          blogs.map(blog => <li key={blog.data.slug}><Link href={`/${blog.data.slug}`}><a>{blog.data.title}</a></Link></li>)
+        }
+      </ul>
     </>
   )
 }
