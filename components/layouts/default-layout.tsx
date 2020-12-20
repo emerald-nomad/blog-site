@@ -4,9 +4,7 @@ const DefaultLayout: React.FC = ({children}) => {
   return (
     <>
       <nav>
-        <div>
-          <a className="border-bottom" href="/"><b>My digital garden</b></a>
-        </div>
+        <Link href="/"><a className="border-bottom"><b>My digital garden</b></a></Link>
       </nav>
       <div className="wrapper">
         <main>{children}</main>
