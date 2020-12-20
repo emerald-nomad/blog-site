@@ -18,6 +18,12 @@
     sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
+.light-mode {
+  --color-background: var(--color-white);
+  --color-text: var(--color-black);
+  --color-subtext: var(--color-grey);
+}
+
 body {
   box-sizing: content-box;
   font-family: var(--font-family);
