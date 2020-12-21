@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Markdown from "react-markdown";
-import { Blog, getBlogPosts, getPageData, Page } from "lib";
 import Link from "next/link";
+import { Blog, getBlogPosts, getPageData, Page, useUpdateExternalLink } from "lib";
 
 
 interface HomeProps {
@@ -10,10 +10,12 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({blogs, pageData}) => {
+  useUpdateExternalLink();
   
   return (
     <>
       <Markdown children={pageData.content} allowDangerousHtml/>
+      <h3>Recent Posts</h3>
       <ul>
         {     
           blogs.map(blog => <li key={blog.data.slug}><Link href={`/${blog.data.slug}`}><a>{blog.data.title}</a></Link></li>)

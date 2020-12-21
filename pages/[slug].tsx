@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from 'next/router'
 import Markdown from "react-markdown";
 import gfm from 'remark-gfm'
-import { Blog, getBlogPost, getBlogPosts } from "lib";
+import { Blog, getBlogPost, getBlogPosts, useUpdateExternalLink } from "lib";
 import { CodeBlock, Table } from "components";
 
 interface PostProps {
@@ -11,6 +11,7 @@ interface PostProps {
 }
 
 const Post: React.FC<PostProps> = ({blogPost}) => {
+  useUpdateExternalLink();
   const router = useRouter();
   
   const renderers = {

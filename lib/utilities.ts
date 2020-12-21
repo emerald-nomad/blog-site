@@ -1,6 +1,21 @@
 import matter from "gray-matter";
 import moment from "moment";
+import { useEffect } from "react";
 import { Blog, Page } from "./types";
+
+export const useUpdateExternalLink = () => {
+  useEffect(() => {
+    // Targets secure url's
+    document.querySelectorAll('a[href^="https://"]').forEach((link) => {
+      link.setAttribute("target", "_blank");
+    });
+
+    // Target unsecured url's
+    document.querySelectorAll('a[href^="http://"]').forEach((link) => {
+      link.setAttribute("target", "_blank");
+    });
+  }, []);
+};
 
 export const getPageData = (page: string): Page => {
   const context = (require as any).context("../data/pages", true, /\.md$/);
