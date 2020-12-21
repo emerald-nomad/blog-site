@@ -4,8 +4,6 @@ title: Home
 
 # Welcome! 🌱
 
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll). If you need any help, my [DMs are open on Twitter (@vaillancourtmax)](https://twitter.com/vaillancourtmax). Say hi! 👋
-
-If this template helps you in any way, [consider buying me a coffee](https://ko-fi.com/maximevaillancourt)! ☕️
+I'm JT and this is my personal digital garden 😁. Where I'll be documenting the things that I'm learning about or that just interest me.
+So that could be about software development, embedded systems, gardening, or even some interesting recipes. Who knows 🤷🏾‍♂️.
+But since you're here I hope that you find something that interests you or helps along with your learning journey.
